@@ -64,33 +64,25 @@ MATRA provides a multi-stage, AI-driven and rule-guided harmonization engine tha
 
 ---
 
-## 5. System Workflow
+## 🔄 5. System Workflow
+
+![MATRA System Workflow Diagram](file:///c:/Users/DELL/Downloads/NHIHP-SIH-Project--main/MATRA/public/workflow-diagram.svg)
+
+### Minimal Step-by-Step Pipeline
 
 ```
-[ RAW CPSE MATERIAL DATA ]
-            ↓
-    [ CSV / API INGESTION ]
-            ↓
-  [ FRONTEND (REACT / VITE) ]
-            ↓
-  [ FASTAPI BACKEND SERVICE ]
-            ↓
-┌──────────────────────────────────────┐
-│       HARMONIZATION ENGINE           │
-│  1. Text Normalization (Regex Rules) │
-│  2. Structured Attribute Extraction  │
-│  3. Similarity & Conflict Score      │
-│  4. Gemini AI Enrichment (Optional)  │
-└──────────────────────────────────────┘
-            ↓
-   [ SQLALCHEMY / SQLITE DB ]
-            ↓
-  [ HUMAN-IN-THE-LOOP REVIEW ]
-            ↓
- [ NMC GENERATION & SAP WRITEBACK ]
-            ↓
-[ EXECUTIVE DASHBOARD & AUDIT LOG ]
+[ Step 1: Ingest Data ]  ──►  [ Step 2: Normalize ]  ──►  [ Step 3: AI Harmonize ]  ──►  [ Step 4: Human Review ]  ──►  [ Step 5: NMC & SAP ]
+  • CSV / ERP Import            • Text & Unit Rules         • Gemini & Fuzzy AI           • Officer Approval           • National Code (NMC)
+  • IOCL, CPCL, NTPC            • Abbreviation Map          • Spec Extraction             • Conflict Check             • SAP / ERP Webhook
 ```
+
+| Step | Pipeline Stage | Technical Mechanism | Output |
+| :--- | :--- | :--- | :--- |
+| **1** | **Data Ingestion** | Bulk CSV Upload / FastAPI Endpoints | Raw Material Logs |
+| **2** | **Rule Normalization** | Dictionary Regex Replacement (`CS` → `CARBON STEEL`, `100NB` → `4 INCH`) | Standardized Text |
+| **3** | **AI Harmonization** | RapidFuzz Token Match + Google Gemini 2.5/3.6 Extraction | Structured Attributes & Similarity Score |
+| **4** | **Human Review** | Role-Based UI Approval & Mandated Justification | Decision Record |
+| **5** | **NMC & ERP Writeback** | Auto-generation of NMC ID (`NMC-PIPE-000184`) & Webhook Trigger | Unified National Catalog Record |
 
 ---
 

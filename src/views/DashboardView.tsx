@@ -36,6 +36,41 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 }) => {
   return (
     <div className="space-y-4 pb-8">
+      {/* Introduction Workflow Slide Card */}
+      <div className="bg-[#07192F] text-white rounded-xl p-5 border border-blue-800/60 shadow-lg relative overflow-hidden">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-3 border-b border-blue-900/80">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-widest mb-1">
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <span>Project Introduction Slide • System Architecture</span>
+            </div>
+            <h1 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+              MATRA System Workflow &amp; Harmonization Engine
+            </h1>
+            <p className="text-xs text-blue-200 mt-1 max-w-3xl leading-relaxed">
+              Automated end-to-end pipeline standardizing fragmented CPSE material master records into a unified National Material Catalog (NMC).
+            </p>
+          </div>
+          <a
+            href="/workflow-diagram.svg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shrink-0 self-start md:self-auto shadow-md"
+          >
+            <span>🔍 View High-Res Diagram</span>
+          </a>
+        </div>
+
+        {/* Embedded SVG Workflow Diagram */}
+        <div className="w-full bg-[#0B2545]/90 rounded-lg p-3 border border-blue-700/50 shadow-inner">
+          <img
+            src="/workflow-diagram.svg"
+            alt="MATRA Minimal System Workflow Diagram"
+            className="w-full h-auto max-h-72 object-contain rounded"
+          />
+        </div>
+      </div>
+
       {/* Registry Session Header Card */}
       <div className="bg-white rounded-lg p-4 border border-slate-200/80 shadow-xs relative overflow-hidden">
         <div className="flex items-start justify-between">
