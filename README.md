@@ -88,38 +88,62 @@ MATRA provides a multi-stage, AI-driven and rule-guided harmonization engine tha
 
 ## 🏗️ 6. System Architecture
 
+![MATRA System Architecture Diagram](file:///c:/Users/DELL/Downloads/NHIHP-SIH-Project--main/MATRA/public/system-architecture.svg)
+
+### Minimal ASCII Tier Diagram
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      PRESENTATION TIER (React 19 SPA)                   │
+│   • TypeScript 5.7    • TailwindCSS 4    • Vite 8    • Executive Navy UX   │
+└─────────────────────────────────────────────────────────────────────────┘
+                                     │  HTTP REST / JSON (Port 3000 -> 8000)
+                                     ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                   API & SECURITY TIER (FastAPI ASGI)                    │
+│   • SlowAPI Rate Limiter   • Pydantic Validation   • Bearer Token Auth │
+└─────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│               HARMONIZATION & INTELLIGENCE TIER (Python 3.13)            │
+│  [Rule Normalization Engine] ──► [AI & Fuzzy Matching] ──► [Conflict Engine]│
+│   Regex & Unit Mapping           Google Gemini LLM        Property Safety  │
+└─────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                DATA & INTEGRATION TIER (SQLAlchemy ORM)                 │
+│   • SQLite Database (nmihp.db)   • Audit Trail   • SAP Webhook API      │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
 ### Architecture Layers
-| Layer | Responsibility |
-| :--- | :--- |
-| **Presentation** | React 19, TypeScript, TailwindCSS v4, Lucide Icons, Motion |
-| **API Layer** | FastAPI, CORS Middleware, Rate Limiter (SlowAPI), HTTP Bearer Auth |
-| **Business Logic** | Dictionary Normalization, Fuzzy Matching (RapidFuzz), Conflict Resolver |
-| **AI/ML Layer** | Google Gemini API (`@google/genai` & `google-generativeai`) |
-| **Database** | SQLAlchemy 2.0 ORM, SQLite (`nmihp.db`) with index optimizations |
-| **Security Layer** | Input validation (Pydantic v2), File Extension Checker, Security Headers |
-| **Deployment** | Node.js (Vite Dev / Static Hosting) & Python (Uvicorn ASGI Server) |
+| Layer | Core Components | Responsibility |
+| :--- | :--- | :--- |
+| **Presentation** | React 19, TypeScript, TailwindCSS v4, Lucide Icons, Motion | User interface, slide decks & officer workflow dashboards |
+| **API Layer** | FastAPI, Uvicorn, CORS Middleware, Rate Limiter (SlowAPI) | Request routing, payload validation & API endpoints |
+| **Harmonization Engine** | Regex Dictionary, RapidFuzz 3.14, Rule Extractor | Text normalization, fuzzy matching & attribute parsing |
+| **AI / ML Layer** | Google Gemini API (`gemini-2.5-flash` / `gemini-1.5-flash`) | Deep technical spec extraction & UNSPSC classification |
+| **Database & Audit** | SQLAlchemy 2.0 ORM, SQLite (`nmihp.db`) | Material master storage, NMC registry & immutable logs |
+| **ERP Integration** | Fast API Webhook Handlers | Automated SAP / Oracle ERP material master writebacks |
 
 ---
 
 ## 🛠️ 7. Technology Stack
 
-### Frontend
-- **Language:** TypeScript / JavaScript (ES Module)
-- **Framework:** React 19
-- **Build Tool:** Vite 8.3
-- **Styling:** TailwindCSS 4.3, Custom Executive Dark Navy & Glassmorphism Design System
-- **Icons & Animation:** Lucide-React, Motion
+![MATRA Technology Stack Matrix](file:///c:/Users/DELL/Downloads/NHIHP-SIH-Project--main/MATRA/public/tech-stack.svg)
 
-### Backend
-- **Language:** Python 3.13
-- **Framework:** FastAPI 0.115
-- **ASGI Server:** Uvicorn 0.32
-- **ORM & DB:** SQLAlchemy 2.0, SQLite 3
-- **Validation & Security:** Pydantic 2.11, SlowAPI 0.1.10, PassLib, Python-Jose
+### Minimal Tech Matrix
 
-### AI / ML & Search
-- **AI Model:** Google Gemini AI API (`google-generativeai` / `@google/genai`)
-- **Matching & Fuzzy Search:** RapidFuzz 3.14 (Levenshtein & Token Ratio algorithms)
+```
+  🎨 FRONTEND             ⚙️ BACKEND             🤖 AI & SEARCH           🗄️ DATA & SECURITY
+  ───────────            ──────────             ───────────────          ───────────────────
+  • React 19             • Python 3.13          • Google Gemini AI       • SQLAlchemy 2.0
+  • TypeScript 5.7       • FastAPI 0.115        • RapidFuzz 3.14         • SQLite (nmihp.db)
+  • TailwindCSS 4        • Uvicorn 0.32         • Regex Normalizer       • SlowAPI Limiter
+  • Vite 8.3             • Pydantic 2.11        • Conflict Guardrails    • SAP Webhook API
+```
 
 ---
 
