@@ -1,15 +1,13 @@
 # 🚀 MATRA — Material Alignment & Reconciliation Assistant
-> **National Material Intelligence & Harmonization Platform (NMIHP)**  
-> A sovereign AI-driven cross-CPSE material master standardization, conflict detection, and harmonization layer for Central Public Sector Enterprises (SIH26099).
+> **Smart India Hackathon 2026 (SIH PS 26099)**  
+> A sovereign AI-driven cross-CPSE material master standardization, conflict detection, and harmonization layer for Central Public Sector Enterprises.
 
-🔗 **Live Demo:** [Visit MATRA App](http://localhost:3000)  
-📂 **Repository:** [GitHub Repository](https://github.com/Rutuja-131005/MATRA-Material-Alignment-Reconciliation-Assistants.git)  
-📄 **Documentation:** [View API Docs](http://localhost:8000/docs)
+🔗 **Live Demo:** [Visit MATRA App](https://matra-material-alignment-reconcilia.vercel.app/)  
 
 ---
 
-## 1. Overview
-**MATRA (Material Alignment & Reconciliation Assistant)** is a sovereign web application and AI harmonization system designed to unify fragmented, inconsistent material master databases across India's Central Public Sector Enterprises (CPSEs) such as IOCL, CPCL, HPCL, and NTPC.
+## 📌 1. Overview
+**MATRA (Material Alignment & Reconciliation Assistant)** is the solution developed by **Team Legal Predators** to address SIH 2026 Problem Statement 26099. It acts as a sovereign material intelligence layer across India's Central Public Sector Enterprises (CPSEs) such as IOCL, CPCL, HPCL, and NTPC.
 
 The system enables procurement officers and enterprise material managers to automatically ingest raw material catalogs, extract standardized technical attributes, detect critical specification conflicts (e.g., pressure rating or material grade mismatches), assign unified **National Material Codes (NMC)**, and trigger SAP/ERP writebacks.
 
@@ -361,10 +359,7 @@ NMC Code Generation (NMC-CAT-XXXXXX)
 ## 🎥 17. Demo
 
 ### Live Application
-🔗 **[Open MATRA Live Demo](http://localhost:3000)**
-
-### Demo Video
-▶️ **[Watch Project Demo Video](https://youtube.com)**
+🔗 **[Open MATRA Live Demo](https://matra-material-alignment-reconcilia.vercel.app/)**
 
 ### Demo Credentials
 - **Role:** Senior Materials Officer / Auditor
